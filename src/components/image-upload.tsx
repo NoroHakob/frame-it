@@ -73,7 +73,6 @@ export default function ImageUpload() {
             value={zoom}
             onChange={setZoom}
           />
-
           <SettingSlider
             label="Transparency"
             min={0}
@@ -83,9 +82,8 @@ export default function ImageUpload() {
             onChange={setTransparency}
             unit="%"
           />
-
           <SettingSlider
-            label="BorderRadius"
+            label="Border Radius"
             min={0}
             max={50}
             step={1}
@@ -93,11 +91,10 @@ export default function ImageUpload() {
             onChange={setBorderRadius}
             unit="px"
           />
-
           <SettingSlider
             label="Shadow"
             min={0}
-            max={50}
+            max={59}
             step={1}
             value={shadow}
             onChange={setShadow}
@@ -134,12 +131,12 @@ export default function ImageUpload() {
               />
             ) : (
               <p className="text-gray-300">
-                {" "}
                 Drag 'n' drop some files here, or click to select files
               </p>
             )}
           </div>
         </div>
+
         <div className="flex mt-4 justify-end">
           <Button onClick={handleDownload}>
             <Download className="h-4 w-4 mr-2" />
